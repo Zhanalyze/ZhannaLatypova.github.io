@@ -1,0 +1,134 @@
+/* Base */
+*{box-sizing:border-box}
+:root{
+  --bg:#ffffff;
+  --ink:#0e0e11;
+  --ink-2:#3b3b40;
+  --muted:#7a7a82;
+  --card:#f6f6f7;
+  --accent:#111111;
+  --radius:24px;
+  --shadow:0 10px 30px rgba(0,0,0,.08);
+}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  color:var(--ink);
+  background:var(--bg);
+  line-height:1.6;
+}
+a{color:var(--ink); text-decoration:none}
+img{max-width:100%; display:block}
+
+.wrap{width:min(1100px, 92%); margin-inline:auto}
+.skip-link{position:absolute; left:-9999px; top:auto}
+.skip-link:focus{left:1rem; top:1rem; background:#000; color:#fff; padding:.5rem 1rem; border-radius:8px}
+
+/* Header */
+.site-header{position:sticky; top:0; backdrop-filter:saturate(180%) blur(8px); background:rgba(255,255,255,.75); z-index:10; border-bottom:1px solid #eee}
+.site-header .wrap{display:flex; align-items:center; justify-content:space-between; padding:.9rem 0}
+.brand .logo{font-weight:700; letter-spacing:.3px; border-bottom:2px solid #111; padding-bottom:2px}
+.nav a{margin-left:1.2rem; font-weight:500}
+.nav a:hover{opacity:.7}
+
+/* Hero */
+.hero{padding:4rem 0 2rem 0}
+.hero-grid{display:grid; grid-template-columns:1.1fr .9fr; gap:2rem; align-items:center}
+.hero .eyebrow{font-size:2rem}
+.hero h1{font-size:clamp(2.2rem, 3.5vw + 1rem, 4rem); margin:.4rem 0}
+.hero .highlight{font-weight:900}
+.subtitle{margin-top:-.4rem; font-weight:600}
+.lede{color:var(--ink-2)}
+.values{padding-left:1.1rem; margin:1rem 0 1.5rem 0}
+.values li{margin:.4rem 0}
+.cta-row{display:flex; gap:.8rem; flex-wrap:wrap}
+.btn{display:inline-flex; align-items:center; justify-content:center; padding:.85rem 1.1rem; border-radius:999px; border:1px solid #ddd; font-weight:600}
+.btn.primary{background:#111; color:#fff; border-color:#111}
+.btn.ghost{background:transparent}
+.btn:hover{transform:translateY(-1px)}
+.hero-photo{position:relative; isolation:isolate}
+.hero-photo img{border-radius:20px; box-shadow:var(--shadow)}
+.blob{position:absolute; inset:-15% -20% auto auto; width:70%; height:70%; z-index:-1;
+  background: radial-gradient(120px 120px at 25% 35%, #ffffff, transparent 60%),
+              conic-gradient(from 180deg at 50% 50%, #7dd3fc, #818cf8, #f472b6, #f59e0b, #7dd3fc);
+  filter: blur(40px) saturate(150%); opacity:.65; border-radius:50%;
+}
+
+/* Ticker */
+.ticker{display:flex; gap:2rem; overflow:hidden; border-top:1px solid #eee; border-bottom:1px solid #eee; padding:.7rem 0; margin-top:2rem; font-weight:700; letter-spacing:.04em}
+.ticker span{white-space:nowrap}
+
+/* Sections */
+.section{padding:4.5rem 0}
+.section-head{margin-bottom:2rem}
+.pill{display:inline-block; border:1px solid #ddd; padding:.35rem .7rem; border-radius:999px; font-weight:600; font-size:.8rem}
+.section h3{font-size:clamp(1.8rem, 2.5vw + .8rem, 2.6rem); margin:.6rem 0}
+.section p{color:var(--ink-2)}
+
+/* Cards */
+.cards{display:grid; grid-template-columns:repeat(2, 1fr); gap:1.5rem}
+.card{background:#fff; border:1px solid #eee; border-radius:var(--radius); overflow:hidden; box-shadow:var(--shadow); display:flex; flex-direction:column}
+.card-media img{aspect-ratio:16/9; object-fit:cover}
+.card-body{padding:1.1rem 1.2rem 1.3rem}
+.badge{font-size:.75rem; font-weight:700; background:#111; color:#fff; padding:.3rem .55rem; border-radius:999px}
+.card h4{margin:.7rem 0}
+.link{font-weight:600}
+.link:hover{opacity:.8}
+
+/* Testimonial */
+.testimonial{background:#fafafa; border-top:1px solid #eee; border-bottom:1px solid #eee}
+.testimonial-grid{display:grid; grid-template-columns:1.4fr .6fr; align-items:center; gap:2rem}
+blockquote{font-size:clamp(1.2rem, 1.2vw + .8rem, 2rem); font-weight:800; line-height:1.35; margin:0}
+blockquote footer{margin-top:1rem; font-weight:500; color:var(--muted)}
+.flower-frame{clip-path:path('M 50 0 L 75 25 L 100 50 L 75 75 L 50 100 L 25 75 L 0 50 L 25 25 Z');}
+.flower-frame img{border-radius:16px}
+
+/* Stats */
+.stats{background:#fff}
+.stats-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:1.2rem; text-align:center}
+.stat{background:#fff; border:1px solid #eee; border-radius:16px; padding:1.4rem}
+.stat-num{font-size:2rem; font-weight:900}
+.stat-label{color:var(--muted)}
+.sayhi{padding-top:2.5rem}
+.sayhi h3{font-size:clamp(1.6rem, 1.6vw + .8rem, 2.4rem); text-align:center}
+.sayhi .light{color:#b3b3b8; font-weight:900}
+
+/* Services */
+.service-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:1.2rem}
+.service{border:1px solid #e6e6e6; border-radius:16px; padding:1.3rem; background:#fff}
+.service.dark{background:#0f0f12; color:#fff; border-color:#0f0f12}
+.service h4{margin:.3rem 0 .6rem 0}
+.service p{margin:0 0 .8rem 0}
+.service .link{display:inline-block; margin-top:.2rem}
+
+/* About */
+.about p{max-width:70ch}
+
+/* Contact */
+.contact-form{display:grid; gap:1rem; max-width:780px}
+.two-col{display:grid; grid-template-columns:1fr 1fr; gap:1rem}
+label span{display:block; font-weight:600; margin-bottom:.4rem}
+input, textarea{width:100%; border:1px solid #ddd; border-radius:12px; padding:.9rem 1rem; font:inherit}
+input:focus, textarea:focus{outline:3px solid rgba(0,0,0,.08); border-color:#bbb}
+.chips{display:flex; flex-wrap:wrap; gap:.5rem; margin:.2rem 0 .6rem}
+.chip{border:1px solid #ddd; border-radius:999px; padding:.5rem .8rem; background:#fff; cursor:pointer}
+.chip.active{background:#111; color:#fff; border-color:#111}
+.small{font-size:.9rem}
+.muted{color:var(--muted)}
+.socials{display:flex; gap:1rem; margin-top:1.4rem}
+
+/* Footer */
+.site-footer{border-top:1px solid #eee; padding:1rem 0; background:#fafafa}
+.site-footer .wrap{display:flex; align-items:center; justify-content:space-between}
+.top-link{font-weight:700}
+
+/* Responsive */
+@media (max-width: 900px){
+  .hero-grid{grid-template-columns:1fr; text-align:left}
+  .cards{grid-template-columns:1fr}
+  .testimonial-grid{grid-template-columns:1fr}
+  .stats-grid{grid-template-columns:repeat(2,1fr)}
+  .service-grid{grid-template-columns:1fr}
+  .two-col{grid-template-columns:1fr}
+}
