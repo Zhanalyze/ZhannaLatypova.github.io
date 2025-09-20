@@ -29,56 +29,90 @@ img{display:block; max-width:100%}
 .nav a:hover{opacity:.75}
 
 /* =============== HERO =============== */
-.hero{padding:26px 0 0}
-.hero-grid{display:grid; grid-template-columns:1.06fr .94fr; gap:26px; align-items:center; position:relative}
+<section class="hero" id="home">
+  <div class="wrap hero-grid">
+    <!-- LEFT -->
+    <div class="hero-copy">
+      <a class="brand-inline" href="#">it’s me</a>
+      <div class="hello-emoji" aria-hidden="true">👋</div>
 
-/* left */
-.brand-inline{display:inline-block; font-weight:900; border-bottom:2px solid #000; margin-bottom:10px}
-.hello-emoji{font-size:28px; margin:10px 0}
-.hero-title{font-size:clamp(38px,6vw,78px); line-height:1.05; margin:6px 0 10px}
-.hero-title .strong{font-weight:900}
-.role-line{display:flex; align-items:center; gap:14px; margin:8px 0 18px}
-.role-line .rule{width:74px; height:2px; background:#000; display:inline-block}
-.role-line .role{font-weight:800}
-.role-line .spark{font-size:18px}
-.lede{color:var(--muted); max-width:62ch}
-.hero-list{margin:16px 0 22px; padding-left:22px}
-.hero-list li{margin:6px 0}
-.cta-row{display:flex; gap:10px; flex-wrap:wrap}
-.btn{display:inline-flex; align-items:center; gap:8px; padding:14px 18px; border-radius:999px; border:1px solid #111; font-weight:900}
-.btn.primary{background:#111; color:#fff}
-.btn.ghost{background:transparent}
-.btn:hover{transform:translateY(-1px)}
-.btn .arrow{transform:translateY(-1px)}
+      <h1 class="hero-title">
+        <span class="hello">Hello!</span> <span class="strong">I’m Zhanna</span>
+      </h1>
 
-/* right */
-.hero-visual{position:relative; min-height:520px}
-.color-cloud{
-  position:absolute; inset:0 auto auto 0; width:82%; height:56%;
-  background:
-    radial-gradient(200px 160px at 26% 38%, #ffffff 10%, transparent 60%),
-    conic-gradient(from 160deg, #7dd3fc, #818cf8, #f472b6, #f59e0b, #7dd3fc);
-  filter:blur(42px) saturate(150%); opacity:.8; border-radius:50%;
-  transform:translate(20%, -10%);
-}
-.mini-cards{
-  position:absolute; top:8px; right:0; display:grid; grid-template-columns:repeat(3,1fr); gap:14px; width:min(560px,100%)
-}
-.mini-card{background:#fff; border:1px solid var(--line); border-radius:16px; padding:14px 16px; box-shadow:var(--shadow)}
-.mini-title{font-weight:900; display:flex; align-items:center; justify-content:space-between}
-.mini-text{color:var(--muted); font-size:12px; line-height:1.35; margin-top:6px}
-.ext{font-weight:900}
-.portrait-wrap{position:absolute; right:0; bottom:0; width:min(520px,92%); translate:0 18px}
-.portrait{border-radius:20px; box-shadow:var(--shadow); width:100%; height:auto; object-fit:cover}
-.hello-badge{position:absolute; left:-48px; bottom:18%; background:#000; color:#fff; padding:26px 26px; border-radius:999px; font-weight:900; font-size:28px; letter-spacing:.02em}
+      <div class="role-line">
+        <span class="rule"></span>
+        <span class="role">Product Designer</span>
+        <span class="spark">✦</span>
+      </div>
 
-/* bottom ticker */
-.ticker{background:#0b0b0c; color:#fff; border-top:1px solid #222; border-bottom:1px solid #222; overflow:hidden; margin-top:22px}
-.ticker-track{display:flex; align-items:center; gap:36px; padding:16px 0; white-space:nowrap; animation:marquee 28s linear infinite}
-.ticker span{font-weight:900; letter-spacing:.06em}
-.ticker .dot{opacity:.7}
-@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+      <p class="lede">
+        Hello! I’m Zhanna. I’m a <b>UX leader, design thinker, product designer</b>,
+        experience strategist, generative artist & human-loving introvert.
+      </p>
 
+      <ul class="hero-list">
+        <li>Product must be authentic</li>
+        <li>Solve pain points elegantly</li>
+        <li>User testing, feedback, and validation</li>
+      </ul>
+
+      <div class="cta-row">
+        <a class="btn primary" href="mailto:hello@yourdomain.tld?subject=Let’s%20Talk%20—%20Zhanna%20Latypova">Let’s Talk</a>
+        <a class="btn outline" href="assets/Zhanna_Latypova_CV.pdf" download>Download Cv <span class="arrow">↧</span></a>
+      </div>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="hero-visual">
+      <!-- rainbow cloud -->
+      <div class="color-cloud"></div>
+
+      <!-- top mini cards -->
+      <div class="mini-cards">
+        <a class="mini-card" href="#case">
+          <div class="mini-title">My Projects <span class="ext">↗</span></div>
+          <div class="mini-text">See all of nice project i have done.</div>
+        </a>
+        <a class="mini-card" href="#about">
+          <div class="mini-title">About Me <span class="ext">↗</span></div>
+          <div class="mini-text">Learn about my self what i do</div>
+        </a>
+        <a class="mini-card" href="#contact">
+          <div class="mini-title">Contact me <span class="ext">↗</span></div>
+          <div class="mini-text">info@yourmail.com</div>
+        </a>
+      </div>
+
+      <!-- portrait (PNG with transparent bg!) -->
+      <div class="portrait-wrap">
+        <img class="portrait cutout" src="assets/portrait-cutout.png" alt="Portrait">
+        <div class="hello-badge">Hello</div>
+      </div>
+
+      <!-- thin decor lines like on ref -->
+      <span class="slash s1" aria-hidden="true"></span>
+      <span class="slash s2" aria-hidden="true"></span>
+      <span class="curly" aria-hidden="true"></span>
+    </div>
+  </div>
+
+  <!-- bottom black ticker -->
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker-track">
+      <span>WEB DESIGN</span><i class="dot">✶</i>
+      <span>APP DESIGN</span><i class="dot">✶</i>
+      <span>DEVELOPMENT</span><i class="dot">✶</i>
+      <span>WEB FLOW</span><i class="dot">✶</i>
+      <span>BRANDING</span><i class="dot">✶</i>
+      <span>WEB DESIGN</span><i class="dot">✶</i>
+      <span>APP DESIGN</span><i class="dot">✶</i>
+      <span>DEVELOPMENT</span><i class="dot">✶</i>
+      <span>WEB FLOW</span><i class="dot">✶</i>
+      <span>BRANDING</span><i class="dot">✶</i>
+    </div>
+  </div>
+</section>
 /* =============== SECTIONS BELOW =============== */
 .section{padding:64px 0}
 .section-head{margin-bottom:18px}
