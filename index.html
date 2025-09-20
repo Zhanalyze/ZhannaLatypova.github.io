@@ -1,519 +1,353 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Zhanna Latypova — Portfolio</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23000'/%3E%3Ctext x='50%25' y='56%25' dominant-baseline='middle' text-anchor='middle' font-family='Inter' font-size='36' fill='%23fff'%3EZ%3C/text%3E%3C/svg%3E">
-<style>
-/* =============== Base =============== */
-*{box-sizing:border-box}
-:root{
-  --ink:#0b0b0c; --muted:#6c6c73; --line:#e9e9ec; --white:#fff; --black:#0b0b0c;
-  --radius:20px; --shadow:0 12px 40px rgba(0,0,0,.08);
-}
-html,body{height:100%}
-body{margin:0; font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif; color:var(--ink); background:#fff; line-height:1.6}
-a{color:inherit; text-decoration:none}
-img{display:block; max-width:100%}
-.wrap{width:min(1160px,92%); margin-inline:auto}
-
-/* header */
-.site-header{position:sticky; top:0; z-index:30; backdrop-filter:saturate(180%) blur(8px); background:rgba(255,255,255,.75); border-bottom:1px solid var(--line)}
-.site-header .wrap{display:flex; align-items:center; justify-content:space-between; padding:12px 0}
-.brand .logo{font-weight:900; border-bottom:2px solid #000; padding-bottom:2px; letter-spacing:.2px}
-.nav a{margin-left:1.2rem; font-weight:700}
-.nav a:hover{opacity:.75}
-
-/* =============== HERO =============== */
-<section class="hero" id="home">
-  <div class="wrap hero-grid">
-    <!-- LEFT -->
-    <div class="hero-copy">
-      <a class="brand-inline" href="#">it’s me</a>
-      <div class="hello-emoji" aria-hidden="true">👋</div>
-
-      <h1 class="hero-title">
-        <span class="hello">Hello!</span> <span class="strong">I’m Zhanna</span>
-      </h1>
-
-      <div class="role-line">
-        <span class="rule"></span>
-        <span class="role">Product Designer</span>
-        <span class="spark">✦</span>
-      </div>
-
-      <p class="lede">
-        Hello! I’m Zhanna. I’m a <b>UX leader, design thinker, product designer</b>,
-        experience strategist, generative artist & human-loving introvert.
-      </p>
-
-      <ul class="hero-list">
-        <li>Product must be authentic</li>
-        <li>Solve pain points elegantly</li>
-        <li>User testing, feedback, and validation</li>
-      </ul>
-
-      <div class="cta-row">
-        <a class="btn primary" href="mailto:hello@yourdomain.tld?subject=Let’s%20Talk%20—%20Zhanna%20Latypova">Let’s Talk</a>
-        <a class="btn outline" href="assets/Zhanna_Latypova_CV.pdf" download>Download Cv <span class="arrow">↧</span></a>
-      </div>
-    </div>
-
-    <!-- RIGHT -->
-    <div class="hero-visual">
-      <!-- rainbow cloud -->
-      <div class="color-cloud"></div>
-
-      <!-- top mini cards -->
-      <div class="mini-cards">
-        <a class="mini-card" href="#case">
-          <div class="mini-title">My Projects <span class="ext">↗</span></div>
-          <div class="mini-text">See all of nice project i have done.</div>
-        </a>
-        <a class="mini-card" href="#about">
-          <div class="mini-title">About Me <span class="ext">↗</span></div>
-          <div class="mini-text">Learn about my self what i do</div>
-        </a>
-        <a class="mini-card" href="#contact">
-          <div class="mini-title">Contact me <span class="ext">↗</span></div>
-          <div class="mini-text">info@yourmail.com</div>
-        </a>
-      </div>
-
-      <!-- portrait (PNG with transparent bg!) -->
-      <div class="portrait-wrap">
-        <img class="portrait cutout" src="assets/portrait-cutout.png" alt="Portrait">
-        <div class="hello-badge">Hello</div>
-      </div>
-
-      <!-- thin decor lines like on ref -->
-      <span class="slash s1" aria-hidden="true"></span>
-      <span class="slash s2" aria-hidden="true"></span>
-      <span class="curly" aria-hidden="true"></span>
-    </div>
-  </div>
-
-  <!-- bottom black ticker -->
-  <div class="ticker" aria-hidden="true">
-    <div class="ticker-track">
-      <span>WEB DESIGN</span><i class="dot">✶</i>
-      <span>APP DESIGN</span><i class="dot">✶</i>
-      <span>DEVELOPMENT</span><i class="dot">✶</i>
-      <span>WEB FLOW</span><i class="dot">✶</i>
-      <span>BRANDING</span><i class="dot">✶</i>
-      <span>WEB DESIGN</span><i class="dot">✶</i>
-      <span>APP DESIGN</span><i class="dot">✶</i>
-      <span>DEVELOPMENT</span><i class="dot">✶</i>
-      <span>WEB FLOW</span><i class="dot">✶</i>
-      <span>BRANDING</span><i class="dot">✶</i>
-    </div>
-  </div>
-</section>
-/* =============== SECTIONS BELOW =============== */
-.section{padding:64px 0}
-.section-head{margin-bottom:18px}
-.pill{display:inline-block; border:1px solid var(--line); padding:.35rem .7rem; border-radius:999px; font-weight:800; font-size:.8rem}
-.section h3{font-size:clamp(28px,3.2vw,40px); margin:.6rem 0}
-.section p{color:var(--muted)}
-
-/* services ("WHAT I'M OFFERING") */
-.services-head{display:flex; align-items:end; justify-content:space-between; gap:16px}
-.all-btn{display:inline-flex; align-items:center; padding:10px 16px; border-radius:999px; border:1px solid #111; font-weight:800}
-.service-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin-top:18px}
-.service{border:1px solid var(--line); border-radius:16px; padding:22px; background:#fff; min-height:180px}
-.service.dark{background:#0f0f12; color:#fff; border-color:#0f0f12}
-.service h4{margin:.2rem 0 .6rem}
-.service p{margin:0; color:inherit}
-
-/* experience list */
-.exp-list{display:grid; gap:12px; margin-top:18px}
-.exp-item{display:grid; grid-template-columns:1fr auto; gap:12px; align-items:center; border:1px solid var(--line); border-radius:12px; padding:14px 16px; background:#fff}
-.exp-left{display:flex; align-items:center; gap:12px}
-.exp-badge{font-weight:900; font-size:12px; border:1px solid var(--line); padding:.2rem .5rem; border-radius:999px}
-.exp-title{font-weight:800}
-.exp-meta{color:var(--muted); font-size:14px}
-.exp-right{font-weight:800}
-
-/* case study grid */
-.cards{display:grid; grid-template-columns:repeat(2,1fr); gap:18px}
-.card{background:#fff; border:1px solid var(--line); border-radius:20px; overflow:hidden; box-shadow:var(--shadow); display:flex; flex-direction:column}
-.card-media img{aspect-ratio:16/9; object-fit:cover}
-.card-body{padding:16px 18px}
-.badge{font-size:.74rem; font-weight:900; background:#111; color:#fff; padding:.28rem .55rem; border-radius:999px}
-.card h4{margin:.6rem 0}
-.link{font-weight:800}
-
-/* testimonial */
-.testimonial{background:#fafafa; border-block:1px solid var(--line)}
-.testimonial-grid{display:grid; grid-template-columns:1.4fr .6fr; gap:24px; align-items:center}
-blockquote{margin:0; font-size:clamp(20px,2.2vw,34px); font-weight:900; line-height:1.25}
-blockquote footer{margin-top:10px; color:var(--muted); font-weight:600}
-.flower{clip-path:path('M 50 0 L 75 25 L 100 50 L 75 75 L 50 100 L 25 75 L 0 50 L 25 25 Z')}
-.flower img{border-radius:16px}
-
-/* stats */
-.stats-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:14px; margin-top:8px}
-.stat{border:1px solid var(--line); border-radius:16px; padding:20px; text-align:center; background:#fff}
-.stat-num{font-weight:900; font-size:30px}
-.stat-label{color:var(--muted)}
-.sayhi{padding-top:28px}
-.sayhi h3{text-align:center; font-size:clamp(24px,2.2vw,34px)}
-.sayhi .light{color:#b6b6bd; font-weight:900}
-
-/* contact */
-.contact-form{display:grid; gap:12px; max-width:780px}
-.two-col{display:grid; grid-template-columns:1fr 1fr; gap:12px}
-label span{display:block; font-weight:800; margin-bottom:.35rem}
-input,textarea{width:100%; border:1px solid var(--line); border-radius:12px; padding:14px 16px; font:inherit}
-input:focus,textarea:focus{outline:3px solid rgba(0,0,0,.08); border-color:#bdbdc3}
-.chips{display:flex; flex-wrap:wrap; gap:8px; margin:.4rem 0}
-.chip{border:1px solid var(--line); border-radius:999px; padding:.5rem .85rem; background:#fff; cursor:pointer}
-.chip.active{background:#111; color:#fff; border-color:#111}
-.small{font-size:.9rem}
-.muted{color:var(--muted)}
-.socials{display:flex; gap:1rem; margin-top:1.2rem}
-
-/* footer */
-.site-footer{border-top:1px solid var(--line); background:#fafafa; padding:14px 0}
-.site-footer .wrap{display:flex; align-items:center; justify-content:space-between}
-
-/* responsive */
-@media (max-width: 980px){
-  .hero-grid{grid-template-columns:1fr}
-  .mini-cards{position:static; grid-template-columns:1fr; margin-bottom:10px}
-  .portrait-wrap{position:relative; width:100%; translate:0}
-  .hello-badge{left:12px; bottom:12px}
-  .cards{grid-template-columns:1fr}
-  .testimonial-grid{grid-template-columns:1fr}
-  .stats-grid{grid-template-columns:repeat(2,1fr)}
-  .service-grid{grid-template-columns:1fr}
-  .two-col{grid-template-columns:1fr}
-}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Zhanna Latypova — Portfolio</title>
+  <meta name="description" content="Portfolio of Zhanna Latypova — UX/Product Designer and AI-driven strategist.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<header class="site-header">
-  <div class="wrap">
-    <a class="brand" href="#"><span class="logo">it’s me</span></a>
-    <nav class="nav" aria-label="Primary">
-      <a href="#services">Services</a>
-      <a href="#experience">Experience</a>
-      <a href="#case">Case Study</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </div>
-</header>
+  <a class="skip" href="#main">Skip to content</a>
 
-<main id="main">
-  <!-- HERO -->
-  <section class="hero" id="home">
-    <div class="wrap hero-grid">
-      <div class="hero-copy">
-        <a class="brand-inline" href="#">it’s me</a>
-        <div class="hello-emoji" aria-hidden="true">👋</div>
-        <h1 class="hero-title">Hello! <span class="strong">I’m Zhanna</span></h1>
-        <div class="role-line">
-          <span class="rule"></span>
-          <span class="role">Product Designer</span>
-          <span class="spark">✦</span>
-        </div>
-        <p class="lede">
-          Hello! I’m Zhanna. I’m a <b>UX leader, design thinker, product designer</b>,
-          experience strategist, generative artist & human-loving introvert.
-        </p>
-        <ul class="hero-list">
-          <li>Product must be authentic</li>
-          <li>Solve pain points elegantly</li>
-          <li>User testing, feedback, and validation</li>
-        </ul>
-        <div class="cta-row">
-          <a class="btn primary" href="mailto:hello@yourdomain.tld?subject=Let’s%20Talk%20—%20Zhanna%20Latypova">Let’s Talk</a>
-          <a class="btn ghost" href="assets/Zhanna_Latypova_CV.pdf" download>Download Cv <span class="arrow">↧</span></a>
-        </div>
-      </div>
-
-      <div class="hero-visual">
-        <div class="color-cloud"></div>
-
-        <div class="mini-cards">
-          <a class="mini-card" href="#case">
-            <div class="mini-title">My Projects <span class="ext">↗</span></div>
-            <div class="mini-text">See all of nice project i have done.</div>
-          </a>
-          <a class="mini-card" href="#about">
-            <div class="mini-title">About Me <span class="ext">↗</span></div>
-            <div class="mini-text">Learn about my self what i do</div>
-          </a>
-          <a class="mini-card" href="#contact">
-            <div class="mini-title">Contact me <span class="ext">↗</span></div>
-            <div class="mini-text">info@yourmail.com</div>
-          </a>
-        </div>
-
-        <div class="portrait-wrap">
-          <!-- replace the src with your real transparent portrait if you have -->
-          <img class="portrait" src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?q=80&w=1200&auto=format&fit=crop" alt="Portrait">
-          <div class="hello-badge">Hello</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="ticker" aria-hidden="true">
-      <div class="ticker-track">
-        <span>WEB DESIGN</span><i class="dot">✶</i>
-        <span>APP DESIGN</span><i class="dot">✶</i>
-        <span>DEVELOPMENT</span><i class="dot">✶</i>
-        <span>WEB FLOW</span><i class="dot">✶</i>
-        <span>BRANDING</span><i class="dot">✶</i>
-        <span>WEB DESIGN</span><i class="dot">✶</i>
-        <span>APP DESIGN</span><i class="dot">✶</i>
-        <span>DEVELOPMENT</span><i class="dot">✶</i>
-        <span>WEB FLOW</span><i class="dot">✶</i>
-        <span>BRANDING</span><i class="dot">✶</i>
-      </div>
-    </div>
-  </section>
-
-  <!-- SERVICES -->
-  <section class="section" id="services">
+  <!-- HEADER -->
+  <header class="site-header">
     <div class="wrap">
-      <div class="services-head">
-        <div>
-          <span class="pill">MY SERVICES ?</span>
-          <h3>WHAT I’M OFFERING</h3>
-          <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</p>
-        </div>
-        <a class="all-btn" href="#services">ALL SERVICE</a>
-      </div>
-
-      <div class="service-grid">
-        <article class="service dark">
-          <h4>UI–UX CREATIVE DESIGN</h4>
-          <p>Product thinking, research, wireframes, prototypes & design systems.</p>
-        </article>
-        <article class="service">
-          <h4>VISUAL GRAPHIC DESIGN</h4>
-          <p>Clean, modern visuals that scale across web and mobile.</p>
-        </article>
-        <article class="service">
-          <h4>STRATEGY & DIGITAL MARKETING</h4>
-          <p>Positioning, funnels, and growth experiments that move metrics.</p>
-        </article>
-      </div>
+      <a class="brand" href="#"><span class="logo">it’s me</span></a>
+      <nav class="nav" aria-label="Primary">
+        <a href="#services">Services</a>
+        <a href="#experience">Experience</a>
+        <a href="#case">Case Study</a>
+        <a href="#contact">Contact</a>
+      </nav>
     </div>
-  </section>
+  </header>
 
-  <!-- EXPERIENCE -->
-  <section class="section" id="experience">
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="wrap hero-grid">
+        <!-- LEFT -->
+        <div class="hero-copy">
+          <a class="brand-inline" href="#">it’s me</a>
+          <div class="hello-emoji" aria-hidden="true">👋</div>
+
+          <h1 class="hero-title">
+            <span class="hello">Hello!</span>
+            <span class="strong">I’m Zhanna</span>
+          </h1>
+
+          <div class="role-line">
+            <span class="rule"></span>
+            <span class="role">Product Designer</span>
+            <span class="spark">✦</span>
+          </div>
+
+          <p class="lede">
+            Hello! I’m Zhanna. I’m a <b>UX leader, design thinker, product designer</b>,
+            experience strategist, generative artist & human-loving introvert.
+          </p>
+
+          <ul class="hero-list">
+            <li>Product must be authentic</li>
+            <li>Solve pain points elegantly</li>
+            <li>User testing, feedback, and validation</li>
+          </ul>
+
+          <div class="cta-row">
+            <a class="btn primary" href="mailto:hello@yourdomain.tld?subject=Let’s%20Talk%20—%20Zhanna%20Latypova">Let’s Talk</a>
+            <a class="btn outline" href="assets/Zhanna_Latypova_CV.pdf" download>Download Cv <span class="arrow">↧</span></a>
+          </div>
+        </div>
+
+        <!-- RIGHT -->
+        <div class="hero-visual">
+          <!-- rainbow gradient cloud -->
+          <div class="color-cloud"></div>
+
+          <!-- top mini cards -->
+          <div class="mini-cards">
+            <a class="mini-card" href="#case">
+              <div class="mini-title">My Projects <span class="ext">↗</span></div>
+              <div class="mini-text">See all of nice project i have done.</div>
+            </a>
+            <a class="mini-card" href="#about">
+              <div class="mini-title">About Me <span class="ext">↗</span></div>
+              <div class="mini-text">Learn about my self what i do</div>
+            </a>
+            <a class="mini-card" href="#contact">
+              <div class="mini-title">Contact me <span class="ext">↗</span></div>
+              <div class="mini-text">info@yourmail.com</div>
+            </a>
+          </div>
+
+          <!-- portrait (PNG without bg) -->
+          <div class="portrait-wrap">
+            <img class="portrait cutout" src="assets/portrait-cutout.png" alt="Portrait">
+            <div class="hello-badge">Hello</div>
+          </div>
+
+          <!-- thin decor strokes -->
+          <span class="slash s1" aria-hidden="true"></span>
+          <span class="slash s2" aria-hidden="true"></span>
+          <span class="curly" aria-hidden="true"></span>
+        </div>
+      </div>
+
+      <!-- black ticker -->
+      <div class="ticker" aria-hidden="true">
+        <div class="ticker-track">
+          <span>WEB DESIGN</span><i class="dot">✶</i>
+          <span>APP DESIGN</span><i class="dot">✶</i>
+          <span>DEVELOPMENT</span><i class="dot">✶</i>
+          <span>WEB FLOW</span><i class="dot">✶</i>
+          <span>BRANDING</span><i class="dot">✶</i>
+          <span>WEB DESIGN</span><i class="dot">✶</i>
+          <span>APP DESIGN</span><i class="dot">✶</i>
+          <span>DEVELOPMENT</span><i class="dot">✶</i>
+          <span>WEB FLOW</span><i class="dot">✶</i>
+          <span>BRANDING</span><i class="dot">✶</i>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="section" id="services">
+      <div class="wrap">
+        <div class="services-head">
+          <div>
+            <span class="pill">MY SERVICES ?</span>
+            <h3>WHAT I’M OFFERING</h3>
+            <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</p>
+          </div>
+          <a class="all-btn" href="#services">ALL SERVICE</a>
+        </div>
+
+        <div class="service-grid">
+          <article class="service dark">
+            <h4>UI-UX CREATIVE DESIGN</h4>
+            <p>Product thinking, research, wireframes, prototypes & design systems.</p>
+          </article>
+          <article class="service">
+            <h4>VISUAL GRAPHIC DESIGN</h4>
+            <p>Clean, modern visuals that scale across web and mobile.</p>
+          </article>
+          <article class="service">
+            <h4>STRATEGY & DIGITAL MARKETING</h4>
+            <p>Positioning, funnels, and growth experiments that move metrics.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="section" id="experience">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="pill">EXPERIENCE</span>
+          <h3>EXPERIENCE</h3>
+        </div>
+        <div class="exp-list">
+          <div class="exp-item">
+            <div class="exp-left">
+              <span class="exp-badge">MICRO-INTERACTION</span>
+              <div>
+                <div class="exp-title">Micro-interaction Awwwards Team</div>
+                <div class="exp-meta">Motion · Remote</div>
+              </div>
+            </div>
+            <div class="exp-right">2024—PRESENT</div>
+          </div>
+
+          <div class="exp-item">
+            <div class="exp-left">
+              <span class="exp-badge">UX DESIGNER</span>
+              <div>
+                <div class="exp-title">Senior UI Designer</div>
+                <div class="exp-meta">Product Design · Remote</div>
+              </div>
+            </div>
+            <div class="exp-right">2023—2024</div>
+          </div>
+
+          <div class="exp-item">
+            <div class="exp-left">
+              <span class="exp-badge">PRODUCT</span>
+              <div>
+                <div class="exp-title">Product Design</div>
+                <div class="exp-meta">Design System · Remote</div>
+              </div>
+            </div>
+            <div class="exp-right">2022—2023</div>
+          </div>
+
+          <div class="exp-item">
+            <div class="exp-left">
+              <span class="exp-badge">TEAM</span>
+              <div>
+                <div class="exp-title">Workflow Team Manager</div>
+                <div class="exp-meta">Motion Team · Remote</div>
+              </div>
+            </div>
+            <div class="exp-right">2019—2022</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CASE STUDY -->
+    <section class="section" id="case">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="pill">CASE STUDY</span>
+          <h3>CASE STUDY</h3>
+        </div>
+
+        <div class="cards">
+          <article class="card">
+            <div class="card-media">
+              <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=1200&auto=format&fit=crop" alt="">
+            </div>
+            <div class="card-body">
+              <span class="badge">WEB DESIGN</span>
+              <h4>Innovative designer for a digital age</h4>
+              <a class="link" href="#">See Details ↗</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-media">
+              <img src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?q=80&w=1200&auto=format&fit=crop" alt="">
+            </div>
+            <div class="card-body">
+              <span class="badge">WEB DESIGN</span>
+              <h4>Web Design for fintech payment solutions.</h4>
+              <a class="link" href="#">See Details ↗</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-media">
+              <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?q=80&w=1200&auto=format&fit=crop" alt="">
+            </div>
+            <div class="card-body">
+              <span class="badge">WEB DESIGN</span>
+              <h4>Minimal Agency website for startups business.</h4>
+              <a class="link" href="#">See Details ↗</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-media">
+              <img src="https://images.unsplash.com/photo-1545239705-1564e58b9e3d?q=80&w=1200&auto=format&fit=crop" alt="">
+            </div>
+            <div class="card-body">
+              <span class="badge">WEB DESIGN</span>
+              <h4>SaaS web and app design project.</h4>
+              <a class="link" href="#">See Details ↗</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIAL -->
+    <section class="section testimonial">
+      <div class="wrap testimonial-grid">
+        <blockquote>
+          <p>“I just wanted to share a quick note and let you know that you guys do a really good job.”</p>
+          <footer>Rohan Sing — Project Manager, Airflow Tech Inc</footer>
+        </blockquote>
+        <div class="flower">
+          <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=900&auto=format&fit=crop" alt="">
+        </div>
+      </div>
+    </section>
+
+    <!-- STATS + SAY HI -->
+    <section class="section stats">
+      <div class="wrap stats-grid">
+        <div class="stat"><div class="stat-num">2450</div><div class="stat-label">Project Completed Done</div></div>
+        <div class="stat"><div class="stat-num">1085</div><div class="stat-label">Satisfied Clients</div></div>
+        <div class="stat"><div class="stat-num">07</div><div class="stat-label">My Team Members</div></div>
+        <div class="stat"><div class="stat-num">2790</div><div class="stat-label">World Wide Customer</div></div>
+      </div>
+      <div class="wrap sayhi">
+        <h3><span class="light">Say Hi!</span> and tell me about <em>your idea</em></h3>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section contact" id="contact">
+      <div class="wrap">
+        <div class="section-head">
+          <p>Have a nice works? reach out  and let’s chat.</p>
+        </div>
+
+        <form class="contact-form" action="https://formspree.io/f/mrbgjqkv" method="POST">
+          <div class="two-col">
+            <label><span>Name*</span><input name="name" type="text" placeholder="Hello…" required></label>
+            <label><span>Email*</span><input name="email" type="email" placeholder="Where can i reply" required></label>
+          </div>
+          <label><span>Company name</span><input name="company" type="text" placeholder="Your company or website?"></label>
+          <label><span>What’s in your mind?*</span><textarea name="message" rows="5" placeholder="Tell me a bit about the project" required></textarea></label>
+
+          <div class="chips">
+            <input type="hidden" name="tags" id="chipsField">
+            <button type="button" class="chip" data-tag="Mobile App">Mobile App</button>
+            <button type="button" class="chip" data-tag="Website Design">Website Design</button>
+            <button type="button" class="chip" data-tag="Branding">Branding</button>
+            <button type="button" class="chip" data-tag="Webflow development">Webflow development</button>
+            <button type="button" class="chip" data-tag="App design">App design</button>
+            <button type="button" class="chip" data-tag="Graphic design">Graphic design</button>
+            <button type="button" class="chip" data-tag="Wordpress">Wordpress</button>
+          </div>
+
+          <button class="btn primary" type="submit">Send Me</button>
+          <p class="small muted">I’ll must get back to you within 24 hours</p>
+        </form>
+
+        <div class="socials">
+          <a href="#">Dribbble</a>
+          <a href="#">Linkdin</a>
+          <a href="#">Instagram</a>
+          <a href="#">Behance</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
     <div class="wrap">
-      <div class="section-head">
-        <span class="pill">EXPERIENCE</span>
-        <h3>EXPERIENCE</h3>
-      </div>
-      <div class="exp-list">
-        <div class="exp-item">
-          <div class="exp-left">
-            <span class="exp-badge">MICRO-INTERACTION</span>
-            <div>
-              <div class="exp-title">Micro-interaction Awwwards Team</div>
-              <div class="exp-meta">Motion · Remote</div>
-            </div>
-          </div>
-          <div class="exp-right">2024—PRESENT</div>
-        </div>
-
-        <div class="exp-item">
-          <div class="exp-left">
-            <span class="exp-badge">UX DESIGNER</span>
-            <div>
-              <div class="exp-title">Senior UI Designer</div>
-              <div class="exp-meta">Product Design · Remote</div>
-            </div>
-          </div>
-          <div class="exp-right">2023—2024</div>
-        </div>
-
-        <div class="exp-item">
-          <div class="exp-left">
-            <span class="exp-badge">PRODUCT</span>
-            <div>
-              <div class="exp-title">Product Design</div>
-              <div class="exp-meta">Design System · Remote</div>
-            </div>
-          </div>
-          <div class="exp-right">2022—2023</div>
-        </div>
-
-        <div class="exp-item">
-          <div class="exp-left">
-            <span class="exp-badge">TEAM</span>
-            <div>
-              <div class="exp-title">Workflow Team Manager</div>
-              <div class="exp-meta">Motion Team · Remote</div>
-            </div>
-          </div>
-          <div class="exp-right">2019—2022</div>
-        </div>
-      </div>
+      <p>Personal portfolio©<span id="year"></span></p>
+      <a href="#home" class="top-link" aria-label="Back to top">↑</a>
     </div>
-  </section>
+  </footer>
 
-  <!-- CASE STUDY -->
-  <section class="section" id="case">
-    <div class="wrap">
-      <div class="section-head">
-        <span class="pill">CASE STUDY</span>
-        <h3>CASE STUDY</h3>
-      </div>
-
-      <div class="cards">
-        <article class="card">
-          <div class="card-media">
-            <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=1200&auto=format&fit=crop" alt="">
-          </div>
-          <div class="card-body">
-            <span class="badge">WEB DESIGN</span>
-            <h4>Innovative designer for a digital age</h4>
-            <a class="link" href="#">See Details ↗</a>
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="card-media">
-            <img src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?q=80&w=1200&auto=format&fit=crop" alt="">
-          </div>
-          <div class="card-body">
-            <span class="badge">WEB DESIGN</span>
-            <h4>Web Design for fintech payment solutions.</h4>
-            <a class="link" href="#">See Details ↗</a>
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="card-media">
-            <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?q=80&w=1200&auto=format&fit=crop" alt="">
-          </div>
-          <div class="card-body">
-            <span class="badge">WEB DESIGN</span>
-            <h4>Minimal Agency website for startups business.</h4>
-            <a class="link" href="#">See Details ↗</a>
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="card-media">
-            <img src="https://images.unsplash.com/photo-1545239705-1564e58b9e3d?q=80&w=1200&auto=format&fit=crop" alt="">
-          </div>
-          <div class="card-body">
-            <span class="badge">WEB DESIGN</span>
-            <h4>SaaS web and app design project.</h4>
-            <a class="link" href="#">See Details ↗</a>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- TESTIMONIAL -->
-  <section class="section testimonial">
-    <div class="wrap testimonial-grid">
-      <blockquote>
-        <p>“I just wanted to share a quick note and let you know that you guys do a really good job.”</p>
-        <footer>Rohan Sing — Project Manager, Airflow Tech Inc</footer>
-      </blockquote>
-      <div class="flower">
-        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=900&auto=format&fit=crop" alt="">
-      </div>
-    </div>
-  </section>
-
-  <!-- STATS + SAY HI -->
-  <section class="section stats">
-    <div class="wrap stats-grid">
-      <div class="stat"><div class="stat-num">2450</div><div class="stat-label">Project Completed Done</div></div>
-      <div class="stat"><div class="stat-num">1085</div><div class="stat-label">Satisfied Clients</div></div>
-      <div class="stat"><div class="stat-num">07</div><div class="stat-label">My Team Members</div></div>
-      <div class="stat"><div class="stat-num">2790</div><div class="stat-label">World Wide Customer</div></div>
-    </div>
-    <div class="wrap sayhi">
-      <h3><span class="light">Say Hi!</span> and tell me about <em>your idea</em></h3>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section class="section contact" id="contact">
-    <div class="wrap">
-      <div class="section-head">
-        <p>Have a nice works? reach out  and let’s chat.</p>
-      </div>
-
-      <form class="contact-form" action="https://formspree.io/f/mrbgjqkv" method="POST">
-        <div class="two-col">
-          <label><span>Name*</span><input name="name" type="text" placeholder="Hello…" required></label>
-          <label><span>Email*</span><input name="email" type="email" placeholder="Where can i reply" required></label>
-        </div>
-        <label><span>Company name</span><input name="company" type="text" placeholder="Your company or website?"></label>
-        <label><span>What’s in your mind?*</span><textarea name="message" rows="5" placeholder="Tell me a bit about the project" required></textarea></label>
-
-        <div class="chips">
-          <input type="hidden" name="tags" id="chipsField">
-          <button type="button" class="chip" data-tag="Mobile App">Mobile App</button>
-          <button type="button" class="chip" data-tag="Website Design">Website Design</button>
-          <button type="button" class="chip" data-tag="Branding">Branding</button>
-          <button type="button" class="chip" data-tag="Webflow development">Webflow development</button>
-          <button type="button" class="chip" data-tag="App design">App design</button>
-          <button type="button" class="chip" data-tag="Graphic design">Graphic design</button>
-          <button type="button" class="chip" data-tag="Wordpress">Wordpress</button>
-        </div>
-
-        <button class="btn primary" type="submit">Send Me</button>
-        <p class="small muted">I’ll must get back to you within 24 hours</p>
-      </form>
-
-      <div class="socials">
-        <a href="#">Dribbble</a>
-        <a href="#">Linkdin</a>
-        <a href="#">Instagram</a>
-        <a href="#">Behance</a>
-      </div>
-    </div>
-  </section>
-</main>
-
-<footer class="site-footer">
-  <div class="wrap">
-    <p>Personal portfolio©<span id="year"></span></p>
-    <a href="#home" class="top-link" aria-label="Back to top">↑</a>
-  </div>
-</footer>
-
-<script>
-document.getElementById('year').textContent = new Date().getFullYear();
-
-// chips → hidden input
-const chips = document.querySelectorAll('.chip');
-const field = document.getElementById('chipsField');
-chips.forEach(ch=>{
-  ch.addEventListener('click', ()=>{
-    ch.classList.toggle('active');
-    field.value = [...document.querySelectorAll('.chip.active')].map(c=>c.dataset.tag).join(', ');
-  });
-});
-
-// smooth scroll
-document.querySelectorAll('a[href^="#"]').forEach(a=>{
-  a.addEventListener('click', e=>{
-    const id=a.getAttribute('href');
-    if(id.length>1){
-      const t=document.querySelector(id);
-      if(t){e.preventDefault(); t.scrollIntoView({behavior:'smooth'});}
-    }
-  });
-});
-</script>
+  <script>
+    // year
+    document.getElementById('year').textContent = new Date().getFullYear();
+    // chips → hidden field
+    const chips = document.querySelectorAll('.chip');
+    const field = document.getElementById('chipsField');
+    chips.forEach(ch => ch.addEventListener('click', () => {
+      ch.classList.toggle('active');
+      field.value = [...document.querySelectorAll('.chip.active')].map(c=>c.dataset.tag).join(', ');
+    }));
+    // smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', e=>{
+        const id=a.getAttribute('href');
+        if(id.length>1){
+          const t=document.querySelector(id);
+          if(t){e.preventDefault(); t.scrollIntoView({behavior:'smooth'});}
+        }
+      });
+    });
+  </script>
 </body>
 </html>
