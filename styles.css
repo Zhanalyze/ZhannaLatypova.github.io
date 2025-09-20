@@ -1,8 +1,8 @@
 /* ===== Base ===== */
 *{box-sizing:border-box}
 :root{
-  --ink:#0b0b0c; --muted:#6c6c73; --line:#e9e9ec; --white:#fff;
-  --radius:20px; --shadow:0 12px 40px rgba(0,0,0,.08);
+  --ink:#0b0b0c; --muted:#6c6c73; --line:#e9e9ec;
+  --shadow:0 12px 40px rgba(0,0,0,.08);
 }
 html,body{height:100%}
 body{margin:0; font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif; color:var(--ink); background:#fff; line-height:1.6}
@@ -18,11 +18,10 @@ img{display:block; max-width:100%}
 .nav a{margin-left:1.1rem; font-weight:800}
 .nav a:hover{opacity:.78}
 
-/* ===== HERO (pixel-match) ===== */
+/* ===== HERO ===== */
 .hero{padding:28px 0 0}
 .hero-grid{display:grid; grid-template-columns:1.06fr .94fr; gap:26px; align-items:center}
 
-/* left */
 .brand-inline{display:inline-block; font-weight:900; border-bottom:2px solid #000; margin-bottom:12px}
 .hello-emoji{font-size:28px; margin:8px 0}
 .hero-title{margin:6px 0 8px; line-height:1.02; letter-spacing:-.01em}
@@ -32,7 +31,7 @@ img{display:block; max-width:100%}
 .role-line .rule{width:84px; height:2px; background:#000; display:inline-block}
 .role-line .role{font-weight:800; letter-spacing:.02em}
 .role-line .spark{font-size:20px}
-.lede{color:var(--muted); max-width:62ch}
+.lede{color:#6c6c73; max-width:62ch}
 .hero-list{margin:18px 0 24px; padding-left:22px}
 .hero-list li{margin:6px 0; list-style:'✓ '; padding-left:.2rem}
 .cta-row{display:flex; gap:12px; flex-wrap:wrap}
@@ -42,7 +41,7 @@ img{display:block; max-width:100%}
 .btn .arrow{transform:translateY(-1px)}
 .btn:hover{transform:translateY(-1px)}
 
-/* right */
+/* right visual */
 .hero-visual{position:relative; min-height:520px}
 .color-cloud{
   position:absolute; top:-8%; right:-8%; width:86%; height:56%;
@@ -84,57 +83,63 @@ img{display:block; max-width:100%}
 .ticker .dot{opacity:.8}
 @keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 
-/* ===== Sections ===== */
+/* ===== SERVICES ===== */
 .section{padding:64px 0}
-.section-head{margin-bottom:18px}
+.services-head{display:grid; grid-template-columns:auto 1fr auto; align-items:end; gap:22px}
+.services-head h3{grid-column:1 / -1; font-size:clamp(28px,3.2vw,40px); margin:.3rem 0}
 .pill{display:inline-block; border:1px solid var(--line); padding:.35rem .7rem; border-radius:999px; font-weight:800; font-size:.8rem}
-.section h3{font-size:clamp(28px,3.2vw,40px); margin:.6rem 0}
-.section p{color:var(--muted)}
+.services-lede{grid-column:1 / 3; color:#6c6c73; margin:0}
+.all-btn{justify-self:end; border:1.8px solid #111; padding:10px 16px; border-radius:999px; font-weight:800}
 
-/* services */
-.services-head{display:flex; align-items:end; justify-content:space-between; gap:16px}
-.all-btn{display:inline-flex; align-items:center; padding:10px 16px; border-radius:999px; border:1px solid #111; font-weight:800}
-.service-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin-top:18px}
-.service{border:1px solid var(--line); border-radius:16px; padding:22px; background:#fff; min-height:180px}
+.service-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin-top:18px}
+.service{border:1px solid var(--line); border-radius:22px; padding:24px; background:#fff; min-height:200px; box-shadow:0 12px 28px rgba(0,0,0,.04)}
 .service.dark{background:#0f0f12; color:#fff; border-color:#0f0f12}
+.service h4{margin:.2rem 0 .7rem; font-weight:900}
+.service p{margin:0}
 
-/* experience list */
-.exp-list{display:grid; gap:12px; margin-top:18px}
-.exp-item{display:grid; grid-template-columns:1fr auto; gap:12px; align-items:center; border:1px solid var(--line); border-radius:12px; padding:14px 16px; background:#fff}
-.exp-left{display:flex; align-items:center; gap:12px}
-.exp-badge{font-weight:900; font-size:12px; border:1px solid var(--line); padding:.2rem .5rem; border-radius:999px}
+/* ===== EXPERIENCE ===== */
+.exp-head{margin-bottom:14px}
+.exp-head h3{font-size:clamp(28px,3.2vw,40px); margin:.3rem 0}
+.exp-list{display:grid; gap:12px}
+.exp-item{border:1px solid var(--line); border-radius:14px; background:#fff; padding:14px 16px}
+.exp-item.dark{background:#1a1a1e; color:#fff; border-color:#1a1a1e}
+.exp-main{display:flex; flex-direction:column; gap:6px}
+.exp-top{display:grid; grid-template-columns:1fr auto; align-items:center}
 .exp-title{font-weight:800}
-.exp-meta{color:var(--muted); font-size:14px}
 .exp-right{font-weight:800}
+.exp-sub{color:#8a8a93}
 
-/* case study cards */
-.cards{display:grid; grid-template-columns:repeat(2,1fr); gap:18px}
-.card{background:#fff; border:1px solid var(--line); border-radius:20px; overflow:hidden; box-shadow:var(--shadow); display:flex; flex-direction:column}
+/* ===== CASE STUDY ===== */
+.section-head-center{text-align:center; margin-bottom:18px}
+.section-head-center h3{font-size:clamp(28px,3.2vw,40px); margin:.3rem 0}
+.cards{display:grid; grid-template-columns:repeat(2,1fr); gap:22px}
+.card{background:#fff; border:1px solid var(--line); border-radius:22px; overflow:hidden; box-shadow:0 30px 60px rgba(0,0,0,.08)}
 .card-media img{aspect-ratio:16/9; object-fit:cover}
-.card-body{padding:16px 18px}
-.badge{font-size:.74rem; font-weight:900; background:#111; color:#fff; padding:.28rem .55rem; border-radius:999px}
-.card h4{margin:.6rem 0}
-.link{font-weight:800}
+.card-body{padding:16px 20px 20px}
+.badge{font-size:.72rem; font-weight:900; background:#111; color:#fff; padding:.28rem .6rem; border-radius:999px}
+.card h4{margin:.6rem 0 0}
+.link{display:inline-block; margin-top:.2rem; font-weight:800}
 
-/* testimonial */
+/* ===== TESTIMONIAL ===== */
 .testimonial{background:#fafafa; border-block:1px solid var(--line)}
-.testimonial-grid{display:grid; grid-template-columns:1.4fr .6fr; gap:24px; align-items:center}
+.testimonial-grid{display:grid; grid-template-columns:1.3fr .7fr; align-items:center; gap:24px}
 blockquote{margin:0; font-size:clamp(20px,2.2vw,34px); font-weight:900; line-height:1.25}
-blockquote footer{margin-top:10px; color:var(--muted); font-weight:600}
+blockquote footer{margin-top:8px; color:#7b7b83; font-weight:600}
 .flower{clip-path:path('M 50 0 L 75 25 L 100 50 L 75 75 L 50 100 L 25 75 L 0 50 L 25 25 Z')}
 .flower img{border-radius:16px}
 
-/* stats */
-.stats-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:14px; margin-top:8px}
-.stat{border:1px solid var(--line); border-radius:16px; padding:20px; text-align:center; background:#fff}
+/* ===== STATS ===== */
+.stats-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:16px}
+.stat{border:1px solid var(--line); border-radius:16px; background:#fff; text-align:center; padding:18px}
 .stat-num{font-weight:900; font-size:30px}
 .stat-label{color:#9a9aa1}
 .sayhi{padding-top:28px}
 .sayhi h3{text-align:center; font-size:clamp(24px,2.2vw,34px)}
 .sayhi .light{color:#b6b6bd; font-weight:900}
 
-/* contact */
-.contact-form{display:grid; gap:12px; max-width:780px}
+/* ===== CONTACT ===== */
+.section-head-center.small-top{margin-top:-10px}
+.contact-form{display:grid; gap:12px; max-width:780px; margin-inline:auto}
 .two-col{display:grid; grid-template-columns:1fr 1fr; gap:12px}
 label span{display:block; font-weight:900; margin-bottom:.35rem}
 input,textarea{width:100%; border:1px solid var(--line); border-radius:12px; padding:14px 16px; font:inherit}
@@ -143,8 +148,8 @@ input:focus,textarea:focus{outline:3px solid rgba(0,0,0,.08); border-color:#bdbd
 .chip{border:1px solid var(--line); border-radius:999px; padding:.5rem .85rem; background:#fff; cursor:pointer}
 .chip.active{background:#111; color:#fff; border-color:#111}
 .small{font-size:.9rem}
-.muted{color:var(--muted)}
-.socials{display:flex; gap:1rem; margin-top:1.2rem}
+.muted{color:#6c6c73}
+.socials{display:flex; gap:1rem; margin-top:1.2rem; justify-content:center}
 
 /* footer */
 .site-footer{border-top:1px solid var(--line); background:#fafafa; padding:14px 0}
@@ -157,6 +162,7 @@ input:focus,textarea:focus{outline:3px solid rgba(0,0,0,.08); border-color:#bdbd
   .portrait-wrap{position:relative; width:100%}
   .hello-badge{left:12px; bottom:14px}
   .slash,.curly{display:none}
+  .services-head{grid-template-columns:1fr; justify-items:start}
   .cards{grid-template-columns:1fr}
   .testimonial-grid{grid-template-columns:1fr}
   .stats-grid{grid-template-columns:repeat(2,1fr)}
